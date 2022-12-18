@@ -47,6 +47,6 @@ Thumbs.db
 
 .idea
 node_modules
-src/*.css
+
 src/*.css.map
 .npmrc

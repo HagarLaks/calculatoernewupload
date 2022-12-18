@@ -1,0 +1,164 @@
+html {
+  height: 90%;
+  width: 90%;
+  margin: 0;
+  /* display: block; */
+  font-family: 'Scientific Calculator LCD', sans-serif;
+  font-size: x-large;
+  margin-top: 10%;
+  margin: auto; }
+
+body {
+  height: 100%;
+  width: 100%; }
+  body .dark .maincalc {
+    background-color: darkslategrey;
+    color: azure; }
+  body .dark .maincalc .calcscreen #thescreen {
+    background-color: #e8f000;
+    color: black; }
+  body .dark .maincalc .calcscreen {
+    background-color: #1f83e7;
+    color: black; }
+  body .dark .scientific {
+    background-color: darkslategrey;
+    color: azure; }
+  body .dark .history {
+    background-color: darkslategrey;
+    color: azure; }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "history main scientific";
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  text-align: center; }
+
+.history {
+  background-color: #3388a2;
+  grid-area: history;
+  height: 100%;
+  border-width: 5px;
+  border-style: solid;
+  visibility: visible; }
+
+.hiddens {
+  visibility: hidden; }
+
+.scientific {
+  background-color: #3c4589;
+  grid-area: scientific;
+  height: 100%;
+  border-width: 5px;
+  border-style: solid;
+  visibility: visible; }
+
+.hiddenh {
+  visibility: hidden; }
+
+.history {
+  background-color: #3388a2;
+  grid-area: history;
+  height: 100%;
+  border-width: 5px;
+  border-style: solid;
+  visibility: visible; }
+
+.maincalc {
+  background-color: #76d1d1;
+  grid-area: main;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1.5fr 1.5fr 2fr 2fr;
+  grid-template-areas: "left screencalc right" "left screencalc right" "left numbers right" "left numbers right";
+  align-items: center;
+  text-align: center;
+  border-color: black;
+  border-top: 5px;
+  border-bottom: 5px;
+  border-style: solid; }
+  .maincalc .button {
+    background-color: deepskyblue; }
+  .maincalc img {
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: contain;
+    padding: 5%; }
+
+.left {
+  grid-area: left;
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  height: 100%; }
+
+.left > div {
+  display: flex;
+  justify-content: center; }
+
+.right > div {
+  display: flex;
+  justify-content: center; }
+
+.left > div:hover {
+  background-color: cornflowerblue; }
+
+div {
+  height: inherit;
+  align-items: center;
+  text-align: center; }
+
+.right {
+  grid-area: right;
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  height: 100%; }
+
+.right > div:hover {
+  background-color: cornflowerblue; }
+
+.calcscreen {
+  grid-area: screencalc;
+  background-color: paleturquoise;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 100%; }
+  .calcscreen div {
+    display: flex;
+    justify-content: center; }
+  .calcscreen #c:hover {
+    background-color: cornflowerblue; }
+
+#thescreen {
+  background-color: silver;
+  border-style: solid;
+  border-width: 3px; }
+
+.nums {
+  grid-area: numbers;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  height: 100%;
+  text-align: center;
+  align-items: center; }
+  .nums div {
+    display: flex;
+    justify-content: center; }
+
+.nums > div:hover {
+  background-color: cornflowerblue; }
+
+@media (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 2fr 2fr;
+    grid-template-areas: "main" "scientific" "history";
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    max-height: 95%; } }
+
+/*# sourceMappingURL=main.css.map */
